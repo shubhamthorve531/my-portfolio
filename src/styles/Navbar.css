@@ -1,0 +1,105 @@
+/* General navbar styling */
+.navbar {
+    background-color: transparent !important;
+    box-shadow: none;
+    backdrop-filter: blur(10px);
+    margin: 10px 0px;
+    --Paper-shadow: none !important;
+  }
+
+  .nav-toolbar{
+    justify-content: space-between;
+    box-shadow: none;
+  }
+  
+  /* Logo text styling */
+  .logo {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+  }
+  
+  /* Diamond-shaped logo */
+  .logo-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #edf2f7;
+    border-radius: 10px;
+    transform: rotate(45deg);
+    transition: all 0.3s ease-in-out;
+    margin-left: 10px;
+  }
+  
+  .logo-box:hover {
+    background-color: #d2e2f3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo-text {
+    transform: rotate(-45deg);
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  /* Desktop Navigation Items */
+  .nav-item {
+    display: inline-block;
+    background-color: #edf2f7;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #000;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.1s ease;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .nav-item:hover {
+    background-color: #d2e2f3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-item:focus {
+    outline: none;
+    border: 2px solid #1976d2;
+  }
+  
+  /* Mobile Navigation */
+  .drawer-content {
+    width: 250px;
+    padding: 16px;
+  }
+  
+  .drawer-item {
+    color: #000;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 8px 16px;
+    background-color: #edf2f7;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .drawer-item:hover {
+    background-color: #d2e2f3;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .drawer-item:focus {
+    outline: none;
+    border: 2px solid #1976d2;
+  }
+  
