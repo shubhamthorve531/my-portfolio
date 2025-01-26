@@ -19,7 +19,7 @@ const Home = () => {
         justifyContent: "space-between",
         flexDirection: { xs: "column", md: "row" },
         textAlign: { xs: "center", md: "left" },
-        mt: 5,
+        pt: 5,
       }}
     >
       {/* Profile Image and Social Links */}
@@ -121,7 +121,7 @@ const Home = () => {
     <Container sx={{ mt: 5, textAlign: "left" }}>
   <Typography
     variant="h6"
-    sx={{ fontWeight: "bold", color: "grey", textAlign: "left" }}
+    sx={{ fontWeight: "bold", color: "rgb(73 138 192)", textAlign: "left" }}
   >
     Skills & Technologies
   </Typography>

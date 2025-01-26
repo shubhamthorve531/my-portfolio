@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { AppBar, Toolbar, IconButton, Drawer,Typography, List, ListItem, ListItemText, Box } from "@mui/material";
+import { AppBar, Toolbar, IconButton, Drawer, Typography, Box, List, ListItem, ListItemText } from "@mui/material";
 import { Menu as MenuIcon, Close as CloseIcon } from "@mui/icons-material";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll"; // Import Link from react-scroll
 import "../assets/Images/logo.jpg"; 
 import "@fontsource/poppins/400.css";
 import "@fontsource/poppins/700.css";
@@ -15,12 +15,11 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { text: "Home", path: "/" },
-    { text: "About", path: "/about" },
-    { text: "Projects", path: "/projects" },
-    { text: "Blogs", path: "/blogs" },
-    { text: "Resume", path: "/projects" },
-    { text: "Contact", path: "/contact" },
+    { text: "Home", target: "home" },
+    { text: "About", target: "about" },
+    { text: "Projects", target: "projects" },
+    { text: "Blogs", target: "blogs" },
+    { text: "Contact", target: "contact" },
   ];
 
   return (
@@ -35,9 +34,16 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <Box sx={{ display: { xs: "none", md: "flex" }, gap: 3 }}>
           {navItems.map((item, index) => (
-            <Box key={index} component={Link} to={item.path} className="nav-item">
+            <Link
+              key={index}
+              to={item.target}
+              smooth={true}
+              duration={500}
+              offset={-80} // Adjust for navbar height offset
+              className="nav-item"
+            >
               {item.text}
-            </Box>
+            </Link>
           ))}
         </Box>
 
@@ -60,8 +66,16 @@ const Navbar = () => {
           </IconButton>
           <List>
             {navItems.map((item, index) => (
-              <ListItem key={index} component={Link} to={item.path} onClick={handleDrawerToggle}>
-                <ListItemText primary={item.text} className="drawer-item" />
+              <ListItem key={index} onClick={handleDrawerToggle}>
+                <Link
+                  to={item.target}
+                  smooth={true}
+                  duration={500}
+                  offset={-80} // Adjust for navbar height offset
+                  className="drawer-item"
+                >
+                  <ListItemText primary={item.text} />
+                </Link>
               </ListItem>
             ))}
           </List>
