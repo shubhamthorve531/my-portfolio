@@ -35,6 +35,7 @@
     transform: rotate(45deg);
     transition: all 0.3s ease-in-out;
     margin-left: 10px;
+    cursor: pointer;
   }
   
   .logo-box:hover {
@@ -63,6 +64,7 @@
     letter-spacing: 1px;
     transition: all 0.1s ease;
     font-family: "Poppins", sans-serif;
+    cursor: pointer;
   }
   
   .nav-item:hover {
@@ -90,6 +92,7 @@
     background-color: #edf2f7;
     border-radius: 5px;
     font-family: "Poppins", sans-serif;
+    width: 100%;
   }
   
   .drawer-item:hover {

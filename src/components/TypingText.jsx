@@ -1,8 +1,31 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import Typed from "typed.js";
 import { Typography } from "@mui/material";
-import {Typed} from "react-typed";
 
 const TypingText = () => {
+  const typedRef = useRef(null);
+
+  useEffect(() => {
+    if (typedRef.current) {
+      const typed = new Typed(typedRef.current, {
+        strings: [
+          "I build scalable web applications.",
+          "I specialize in React and modern UI development.",
+          "I enjoy solving complex problems with simple solutions.",
+          "I am passionate about continuous learning and growth.",
+          "I believe in writing clean, maintainable code."
+        ],
+        typeSpeed: 50,
+        backSpeed: 30,
+        loop: true,
+      });
+
+      return () => {
+        typed.destroy(); // Cleanup on component unmount
+      };
+    }
+  }, []);
+
   return (
     <Typography
       variant="body1"
@@ -13,19 +36,7 @@ const TypingText = () => {
         opacity: 0.8,
       }}
     >
-      <span>
-        <Typed
-          strings={[
-            "I like to solve problems",
-            "I like to learn new things",
-            "I like trekking",
-            "I like running",
-          ]}
-          typeSpeed={50}  // Typing speed in milliseconds
-          backSpeed={30}  // Backspacing speed
-          loop            // Keeps looping through the strings
-        />
-      </span>
+      <span ref={typedRef} />
     </Typography>
   );
 };

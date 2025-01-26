@@ -1,0 +1,164 @@
+/* about.css */
+
+.about-container {
+  padding-left: 0%;
+  padding-right: 0%;
+}
+
+.about-text-box-0{
+    display: flex;
+    flex-direction: row;
+}
+
+.about-profile {
+  text-align: center;
+}
+
+.about-image {
+  border-radius: 20%;
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+}
+
+.about-text {
+  margin-top: 10px;
+  font-weight: bold;
+  color: grey;
+}
+
+.about-text-box {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.about-text-box-1-0{
+        margin-right: 10px;
+}
+
+.about-heading {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.about-description {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: black;
+  opacity: 0.8;
+}
+
+.about-skills {
+  margin-top: 50px;
+}
+
+.about-skills-heading {
+  font-weight: bold;
+  color: grey;
+  text-align: left;
+}
+
+.about-skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-skill-name {
+  margin-top: 10px;
+  font-size: 0.8rem;
+}
+
+.about-footer {
+  margin-top: 30px;
+  font-size: 1rem;
+  color: grey;
+  text-align: center;
+}
+.about-text-box-2{
+    width: 120%;
+}
+  
+  .timeline-heading {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #edf2f7;
+  }
+  
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-left: 30px;
+  }
+  
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, #007bff, #00c6ff);
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 20px;
+  }
+  
+  .timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 13px;
+    width: 7px;
+    height: 7px;
+    background: #007bff;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.7);
+}
+  
+  .timeline-title {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .timeline-duration {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .timeline-description {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+  }
+
+  .about-text-box-1-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 244px;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .developer-illustration {
+    height: 10rem;
+    margin: auto;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slick-slide {
+    transform: scale(0.85);
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slick-center {
+    transform: scale(1);
+  }
+  
